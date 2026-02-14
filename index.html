@@ -1,108 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="UTF-8">
-<title>Veeresh ❤️ Kavya KS</title>
+
+<title>Veeresh ❤️ Kavya</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
+<div class="overlay">
+
+<h1 id="text"></h1>
+
+<div class="buttons">
+
+<button onclick="yesClick()">YES ❤️</button>
+
+<button id="noBtn">NO</button>
+
+</div>
+
+</div>
+
 <audio autoplay loop>
-<source src="music/music.mp3" type="audio/mp3">
+
+<source src="music.mpeg" type="audio/mpeg">
+
 </audio>
 
-
-<!-- Intro -->
-
-<div id="intro">
-
-<h1>🌹 A Special Surprise For You Kavya KS 🌹</h1>
-
-<button onclick="start()">Open My Heart ❤️</button>
-
-</div>
-
-
-<!-- Question -->
-
-<div id="question" style="display:none;">
-
-<h1>🌹 Kavya KS, Will you be my Valentine? 🌹</h1>
-
-<button onclick="yes()">YES ❤️</button>
-
-<button id="noBtn" onmouseover="moveNo()">NO 😢</button>
-
-</div>
-
-
-
-<!-- Love Message -->
-
-<div id="love" style="display:none;">
-
-<h1>🌹 Veeresh ❤️ Kavya KS Forever 🌹</h1>
-
-
-<p>
-
-My Paapu, My Kanda, My Darling, My Wife ❤️  
-
-You are my happiness, my peace, and my entire life.  
-With you, every moment feels magical and complete.
-
-You are not just my love… you are my forever, my home, and my future.
-
-I promise to love you, protect you, and stand beside you in every situation forever.
-
-I love you more than words can ever express. 🌹
-
-</p>
-
-
-<img src="photos/photo1.jpg" class="photo">
-<img src="photos/photo2.jpg" class="photo">
-<img src="photos/photo3.jpg" class="photo">
-
-
-<h2>🌹 Will you stay with me forever? 💍 🌹</h2>
-
-<h1>❤️ I Love You Paapu ❤️</h1>
-
-
-</div>
-
-
-
-<script>
-
-function start(){
-
-document.getElementById("intro").style.display="none";
-document.getElementById("question").style.display="block";
-
-}
-
-function yes(){
-
-document.getElementById("question").style.display="none";
-document.getElementById("love").style.display="block";
-
-}
-
-function moveNo(){
-
-let btn=document.getElementById("noBtn");
-
-btn.style.position="absolute";
-btn.style.top=Math.random()*500+"px";
-btn.style.left=Math.random()*500+"px";
-
-}
-
-</script>
-
+<script src="script.js"></script>
 
 </body>
+
 </html>

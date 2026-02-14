@@ -1,31 +1,32 @@
 
-var message =
+var text =
 
 "My Paapu, Kanda, Darling, My Wife ❤️\n\n" +
 
-"You are my happiness, my peace, my forever.\n\n" +
+"You are my life, my happiness, my forever.\n\n" +
 
-"Will you be my Valentine and stay with me forever?";
+"Will you be mine forever?";
 
-var i = 0;
+var i=0;
 
-var speed = 50;
+function typing(){
 
-function typeWriter(){
+if(i<text.length){
 
-if(i < message.length){
-
-document.getElementById("text").innerHTML += message.charAt(i);
+document.getElementById("text").innerHTML+=text.charAt(i);
 
 i++;
 
-setTimeout(typeWriter, speed);
+setTimeout(typing,50);
 
 }
 
 }
 
-typeWriter();
+typing();
+
+
+// NO button escape
 
 document.getElementById("noBtn").onmouseover=function(){
 
@@ -37,9 +38,25 @@ this.style.left=Math.random()*500+"px";
 
 }
 
+
+// YES click
+
 function yesClick(){
 
-document.body.innerHTML =
+document.getElementById("music").play();
+
+showFinal();
+
+startRoses();
+
+}
+
+
+// FINAL screen
+
+function showFinal(){
+
+document.body.innerHTML=
 
 `
 
@@ -47,9 +64,7 @@ document.body.innerHTML =
 
 I LOVE YOU KAVYA ❤️<br><br>
 
-Will you stay with me forever?<br><br>
-
-💍
+Will you stay with me forever? 💍
 
 </h1>
 
@@ -60,5 +75,26 @@ Will you stay with me forever?<br><br>
 <img src="photo3.jpg">
 
 `;
+
+}
+
+
+// ROSES
+
+function startRoses(){
+
+setInterval(function(){
+
+var rose=document.createElement("div");
+
+rose.innerHTML="🌹";
+
+rose.className="rose";
+
+rose.style.left=Math.random()*100+"%";
+
+document.body.appendChild(rose);
+
+},300);
 
 }

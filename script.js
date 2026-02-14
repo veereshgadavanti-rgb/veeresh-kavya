@@ -1,19 +1,19 @@
 
-var text =
+var message=
 
-"My Paapu, Kanda, Darling, My Wife ❤️\n\n" +
+"My Paapu, Kanda, Darling, My Wife ❤️\n\n"+
 
-"You are my life, my happiness, my forever.\n\n" +
+"You are my heart, my soul, my forever.\n\n"+
 
-"Will you be mine forever?";
+"You and me... this love is forever.";
 
 var i=0;
 
 function typing(){
 
-if(i<text.length){
+if(i<message.length){
 
-document.getElementById("text").innerHTML+=text.charAt(i);
+document.getElementById("text").innerHTML+=message.charAt(i);
 
 i++;
 
@@ -26,7 +26,7 @@ setTimeout(typing,50);
 typing();
 
 
-// NO button escape
+// NO escape
 
 document.getElementById("noBtn").onmouseover=function(){
 
@@ -39,20 +39,20 @@ this.style.left=Math.random()*500+"px";
 }
 
 
-// YES click
+// START LOVE
 
-function yesClick(){
+function startLove(){
 
 document.getElementById("music").play();
 
 showFinal();
 
-startRoses();
+effects();
 
 }
 
 
-// FINAL screen
+// FINAL MESSAGE (POSITIVE)
 
 function showFinal(){
 
@@ -60,11 +60,15 @@ document.body.innerHTML=
 
 `
 
-<h1 style="color:red;text-align:center">
+<h1 style="color:red;text-align:center;font-size:40px">
 
-I LOVE YOU KAVYA ❤️<br><br>
+Veeresh ❤️ Kavya<br><br>
 
-Will you stay with me forever? 💍
+We will never stop loving each other.<br><br>
+
+Our love is forever.<br><br>
+
+💍❤️🌹
 
 </h1>
 
@@ -79,21 +83,21 @@ Will you stay with me forever? 💍
 }
 
 
-// ROSES
+// EFFECTS
 
-function startRoses(){
+function effects(){
 
 setInterval(function(){
 
-var rose=document.createElement("div");
+var e=document.createElement("div");
 
-rose.innerHTML="🌹";
+e.innerHTML="❤️";
 
-rose.className="rose";
+e.className="effect";
 
-rose.style.left=Math.random()*100+"%";
+e.style.left=Math.random()*100+"%";
 
-document.body.appendChild(rose);
+document.body.appendChild(e);
 
 },300);
 

@@ -1,34 +1,64 @@
-var no=document.getElementById("no");
 
-no.onmouseover=function(){
-no.style.left=Math.random()*window.innerWidth+"px";
-no.style.top=Math.random()*window.innerHeight+"px";
-}
+var message =
 
-document.getElementById("yes").onclick=function(){
+"My Paapu, Kanda, Darling, My Wife ❤️\n\n" +
 
-document.getElementById("question").style.display="none";
-document.getElementById("final").style.display="block";
+"You are my happiness, my peace, my forever.\n\n" +
 
-document.getElementById("music").play();
+"Will you be my Valentine and stay with me forever?";
 
-type();
+var i = 0;
 
-};
+var speed = 50;
 
-var text="Kavya ❤️ You are my forever. Love you always. 💖";
+function typeWriter(){
 
-var i=0;
+if(i < message.length){
 
-function type(){
-
-if(i<text.length){
-
-document.getElementById("message").innerHTML+=text.charAt(i);
+document.getElementById("text").innerHTML += message.charAt(i);
 
 i++;
-setTimeout(type,40);
+
+setTimeout(typeWriter, speed);
 
 }
+
+}
+
+typeWriter();
+
+document.getElementById("noBtn").onmouseover=function(){
+
+this.style.position="absolute";
+
+this.style.top=Math.random()*500+"px";
+
+this.style.left=Math.random()*500+"px";
+
+}
+
+function yesClick(){
+
+document.body.innerHTML =
+
+`
+
+<h1 style="color:red;text-align:center">
+
+I LOVE YOU KAVYA ❤️<br><br>
+
+Will you stay with me forever?<br><br>
+
+💍
+
+</h1>
+
+<img src="photo1.jpg">
+
+<img src="photo2.jpg">
+
+<img src="photo3.jpg">
+
+`;
 
 }

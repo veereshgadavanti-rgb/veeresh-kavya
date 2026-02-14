@@ -6,9 +6,7 @@ var message =
 
 "You are my life, my happiness, my forever.\n\n"+
 
-"Our love is the most beautiful thing in my life.\n\n"+
-
-"Click YES to enter our forever world ❤️";
+"Our love is forever ❤️";
 
 
 var i=0;
@@ -33,20 +31,17 @@ typing();
 
 
 
+
 // NO button escape
 
 
 document.getElementById("noBtn").onmouseover=function(){
 
-
 this.style.position="absolute";
-
 
 this.style.top=Math.random()*500+"px";
 
-
 this.style.left=Math.random()*500+"px";
-
 
 }
 
@@ -58,78 +53,58 @@ this.style.left=Math.random()*500+"px";
 function startLove(){
 
 
-document.getElementById("music").play();
+var music=document.getElementById("music");
+
+music.play().catch(()=>{});
 
 
-finalPage();
+showFinal();
 
-
-hearts();
-
+startHearts();
 
 }
+
 
 
 
 // FINAL PAGE
 
 
-function finalPage(){
+function showFinal(){
 
+document.body.innerHTML=`
 
-document.body.innerHTML =
+<h1 style="color:red;text-align:center">
 
-
-`
-
-
-<h1 style="color:red;text-align:center;font-weight:bold;">
-
-
-Veeresh Loves Kavuuuuu🌹❤️
-
+Veeresh ❤️ Kavya
 
 <br><br>
-
 
 We will never stop loving each other.
 
-
 <br><br>
 
-
-Our love is forever and infinite.
-
-
-<br><br>
-
-
-🌹❤️💍
-
+Our love is forever ❤️
 
 </h1>
 
-
 <img src="photo1.jpg">
-
 
 <img src="photo2.jpg">
 
-
 <img src="photo3.jpg">
 
-
 `;
-
 
 }
 
 
 
-// HEART EFFECT
+
+// HEART FALL FROM SKY
 
 
-function hearts(){
+function startHearts(){
 
 
 setInterval(function(){
@@ -137,15 +112,13 @@ setInterval(function(){
 
 var heart=document.createElement("div");
 
-
 heart.innerHTML="❤️";
-
 
 heart.className="heart";
 
+heart.style.left=Math.random()*100+"vw";
 
-heart.style.left=Math.random()*100+"%";
-
+heart.style.animationDuration=(Math.random()*3+3)+"s";
 
 document.body.appendChild(heart);
 

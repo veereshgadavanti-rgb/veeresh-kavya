@@ -11,6 +11,7 @@ overflow:hidden;
 
 }
 
+
 .overlay{
 
 background:rgba(0,0,0,0.6);
@@ -19,10 +20,10 @@ border-radius:20px;
 text-align:center;
 color:red;
 font-weight:bold;
-
-animation:fade 2s;
+font-size:28px;
 
 }
+
 
 button{
 
@@ -31,43 +32,50 @@ margin:10px;
 font-size:18px;
 cursor:pointer;
 border-radius:10px;
+border:none;
 
 }
 
-@keyframes fade{
 
-from{opacity:0}
-to{opacity:1}
 
-}
+/* HEART FALL FROM TOP */
 
-.effect{
 
-position:absolute;
+.heart{
+
+position:fixed;
+
+top:-50px;
+
 font-size:30px;
-animation:fall 4s linear infinite;
+
+animation:fall linear forwards;
 
 }
+
 
 @keyframes fall{
 
-0%{top:-10%}
-100%{top:100%}
+0%{
+
+top:-50px;
 
 }
+
+100%{
+
+top:100vh;
+
+}
+
+}
+
+
 
 img{
 
 width:250px;
 margin:10px;
 border-radius:15px;
-animation:zoom 3s infinite alternate;
-
-}
-
-@keyframes zoom{
-
-from{transform:scale(1)}
-to{transform:scale(1.1)}
 
 }

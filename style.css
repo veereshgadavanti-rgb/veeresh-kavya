@@ -1,41 +1,68 @@
 body{
+
 margin:0;
-text-align:center;
-font-family:Arial;
-color:white;
-background:url('background/bg.jpg') center/cover no-repeat fixed;
-background-color:black;
+padding:0;
+
+background:url('bg.jpg') no-repeat center center/cover;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-family:cursive;
+
+color:red;
+
+font-weight:bold;
+
+overflow:hidden;
+
 }
 
-.hidden{display:none;}
+.overlay{
+
+background:rgba(0,0,0,0.5);
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+}
 
 button{
-padding:15px 30px;
-font-size:20px;
-border:none;
-border-radius:10px;
+
+padding:12px 25px;
+
+font-size:18px;
+
+margin:10px;
+
 cursor:pointer;
+
+border:none;
+
+border-radius:10px;
+
 }
 
-#yes{background:green;}
-#no{background:red;position:absolute;}
+h1{
 
-.gallery img{
+font-size:32px;
+
+}
+
+img{
+
 width:250px;
-margin:20px;
-border-radius:20px;
-}
 
-.glow{
-animation:glow 1s infinite alternate;
-}
+margin-top:20px;
 
-@keyframes glow{
-from{text-shadow:0 0 10px pink;}
-to{text-shadow:0 0 40px red;}
-}
+border-radius:15px;
 
-.proposal{
-font-size:40px;
-color:gold;
 }
